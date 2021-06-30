@@ -1,33 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/all.min.css">
-     <link rel="stylesheet" href="css/style.css">
-    <title>Blood-Bank</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Bank</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link href="css/skitter.css" type="text/css" media="all" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <section>
-        
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand mb-0 h1 .nav-color" href="#"
+          >BLOOD <sub class="sub-color">BANK</sub></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Status</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Achivement</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <button
+              class="btn btn-outline-danger my-2 my-sm-0 ml-3"
+              type="submit"
+            >
+              Sign up
+            </button>
+            <button
+              class="btn btn-outline-danger my-2 my-sm-0 ml-3"
+              type="submit"
+            >
+              Login
+            </button>
+          </form>
+        </div>
+      </nav>
     </section>
 
+    <section class="home vh-100 overflow-hidden">
+      <div class="skitter skitter-large with-dots m-auto skitter-width">
+        <ul>
+          <li>
+            <a href="#cut">
+              <img src="images/home_1_slider_1.jpg" class="cut w-100" />
+            </a>
+            <div class="label_text">
+              <h3>
+                Donate blood,<strong class="main-color">save life !</strong>
+              </h3>
+              <h2>
+                YOUR BLOOD
+                <br />
+                CAN BRING SMILE
+                <br />
+                IN OTHER PERSON FACE
+              </h2>
+            </div>
+          </li>
+          <li>
+            <a href="#swapBlocks">
+              <img src="images/home_1_slider_2.jpg" class="swapBlocks w-100" />
+            </a>
+            <div class="label_text">
+              <h3>
+                Donate blood,<strong class="main-color">save life !</strong>
+              </h3>
+              <h2 class="mb-3">
+                DONATE BLOOD
+                <br />
 
+                AND INSPIRES OTHERS.
+              </h2>
+              <a href="#" class="btn btn-danger btn-lg">Donate Now</a>
+            </div>
+          </li>
+          <li>
+            <a href="#swapBarsBack" class="position-relative">
+              <img src="images/12349205.jpg" class="swapBarsBack w-100" />
+            </a>
+            <div class="label_text">
+              <h2 class="mb-3">DID YOU KNOW?</h2>
+              <h3>
+                One blood dontation
+                <br />
+                Could save up <strong class="main-color">three</strong> lives
+              </h3>
+            </div>
+          </li>
+          <li>
+            <a href="#swapBarsBack">
+              <img src="images/jpg.jpg" class="swapBarsBack w-75" />
+            </a>
+            <div class="label_text text-center">
+              <h4 class="mb-5">Awesome Words From Members</h4>
+              <span class="line"></span>
+              <h2>JOIN WITH US AND SAVE LIFE</h2>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
+    <section class="about my-5">
+      <div class="container">
+        <h2 class="lines text-center position-relative pb-3">ABOUT US</h2>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <div class="about-us">
+              <h2 class="pb-4">Who We Are?</h2>
+              <span class="line mt-4"></span>
+              <p>
+                Blood Buddies is for public donation center with blood donation
+                members in the changing health care system
+              </p>
+              <ul>
+                <li>Specialist blood donors and clinical supervision.</li>
+                <li>Increasing communication with our members</li>
+                <li>High quality assessment, diagnosis and treatment.</li>
+                <li>Examine critically to ensure alignment.</li>
+                <li>The extra care of a multi-disciplinary team.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="about-img">
+              <img src="images/about_feat_bg.jpg" class="w-100" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="p-5 bg-status">
+      <div class="d-flex justify-content-around align-items-center">
+        <button class="my-2 my-sm-0 donor text-white" type="submit">
+          BLOOD DONOR
+        </button>
+        <button class="my-2 my-sm-0 need text-white" type="submit">
+          NEED BLOOD
+        </button>
+      </div>
+    </section>
+    <section class="p-5 bg-color overflow-hidden">
+      <h2 class="lines pb-3 text-center position-relative">OUR ACHIEVEMENT</h2>
+      <div class="row mt-5">
+        <div class="col-md-3">
+          <div class="item">
+            <i class="fa fa-heartbeat icon"></i>
+            <span class="counter">2578</span>
+            <h4>Success</h4>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item">
+            <i class="fa fa-stethoscope icon"></i>
+            <span class="counter">3235</span>
+            <h4>Happy Donors</h4>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item">
+            <i class="fa fa-users icon"></i>
+            <span class="counter">3568</span>
+            <h4>SHappy Recipient</h4>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item">
+            <i class="fa fa-building icon"></i>
+            <span class="counter">1364</span>
+            <h4>Total Awards</h4>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section
+      class="testimonial mt-5 position-relative py-5 overflow-hidden"
+      id="Testimonial"
+    >
+      <div class="text-center position-relative">
+        <div class="container py-64">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+            </ol>
+            <div class="carousel-inner">
+              <h2 class="caption_test">Testimonial</h2>
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="member">
+                      <p>
+                        They have the best team of experienced Cardiac
+                        doctors<br />
+                        who diagnosed and treated my grandmother's condition.
+                      </p>
+                      <div class="member-info">
+                        <img src="images/testimonial-2.jpg" class="shadow" />
+                        <h3>xavi alonso</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="member">
+                      <p>
+                        They are one of the best Cardiologists in town. I am<br />
+                        happy that I took their suggestion for my father’s
+                        treatment.
+                      </p>
+                      <div class="member-info">
+                        <img src="images/testimonial-4.jpg" class="shadow" />
+                        <h3>Marta Socrate</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="member">
+                      <p>
+                        Post Bypass Surgery my uncle was in the hospital for<br>
+                        recovery. We were really satisfied with the care taken.
+                      </p>
+                      <div class="member-info">
+                        <img
+                          src="images/CF451BF3C107381989954D48EB_1583385769464.jpg"
+                          class="shadow"
+                        />
+                        <h3>Ajay Singh</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon d-none"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon d-none"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-
-
-
-
-
+    <section class="contact my-5 container overflow-hidden" id="Contact">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="item-contact container">
+            <div class="content d-flex">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Our Office Addres</h4>
+                <p>Malad West, Mumbai, Maharashtra 400064</p>
+              </div>
+            </div>
+            <div class="content d-flex">
+              <i class="fas fa-envelope icon-font"></i>
+              <div>
+                <h4>General Enquiries</h4>
+                <p>contact@mysites.com</p>
+              </div>
+            </div>
+            <div class="content d-flex">
+              <i class="fas fa-phone-volume"></i>
+              <div>
+                <h4>Call Us</h4>
+                <p>+91-8888888888</p>
+              </div>
+            </div>
+            <div class="content d-flex">
+              <i class="fas fa-clock icon-font"></i>
+              <div>
+                <h4>Our Timing</h4>
+                <p>Mon - Sun : 09:00 AM - 09:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="item-content text-center">
+            <form>
+              <input type="text" placeholder="Your Name" />
+              <input type="email" placeholder="Your Email" />
+              <input type="text" placeholder="Subject" />
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                placeholder="Message"
+                rows="3"
+              ></textarea>
+              <button class="btn btn-danger btn-lg my-2 px-4 rounded-pill">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container-fluid bg-contact text-center text-white p-2">
+      <p>© Copyrights 2021 - 2022.BLOOD BANK.All Rights Reserved.</p>
+    </div>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.skitter.min.js"></script>
+    <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,372 @@
+/*--------------------------------------------------------------------*/
+/*___________________________navbar & home section____________________*/
+/*--------------------------------------------------------------------*/
+
+
+nav{
+    position: relative;
+    top: 0;
+    left:0;
+    right: 0;
+    z-index: 9999999999999;
+}
+h2{
+    font-size:40px ;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 30px;
+}
+
+.main-color{
+    color:#dc3545;
+}
+
+.line{
+   background: #EF3D32;
+   width: 72px;
+   height: 2px;
+   margin-top: 0px;
+   position: absolute;
+   top:50px;
+   left: 130px;
+}
+.prev_button{
+   display: block !important;
+}
+.next_button{
+    display: block !important;
+}
+
+.label_skitter {
+    z-index: 150;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-40%);
+    left:20%;
+    width: 100%;
+    color:#fff;
+    background: none;
+    
+}
+
+
+.skitter .next_button {
+    right: -55%;
+
+}
+
+
+
+.skitter > span{
+    display: block;
+    left:80% !important;
+}
+
+
+/* .skitter{
+    max-width: 100%;
+    height:100vh;
+}
+ 
+
+.container_skitter { max-width:1920px !important;   height:100vh; } 
+
+.box_skitter { width:100vw !important; height:100vh !important; } 
+
+.box_skitter img { height:100vh; max-width: 100vw !important;  }  */
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+    font-weight: 600;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color:#ef3d32;
+}
+.sub-color{
+    color: #000;
+}
+.navbar-light .navbar-brand {
+    color:#ef3d32;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.navbar-light .navbar-brand:hover {
+    color:#ef3d32;
+    font-size: 25px;
+    font-weight: 700;
+}
+/*------------------------------------------------------------*/
+/*___________________________about section____________________*/
+/*------------------------------------------------------------*/
+
+
+
+.lines::before {
+    content: "";
+    border-color: #ff305b;
+    border-style: solid;
+    border-width: 1px 0;
+    bottom: 0px;
+    padding: 0.25rem 0 0.3125rem;
+    width: 4.375rem;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+}
+
+.lines::after {
+    content: "";
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    background-color: #ff305b;
+    bottom: 0.3125rem;
+    height: 1px;
+    width: 10rem;
+}
+
+.about-us p{
+    font-size: 20px;
+    color: grey;
+    margin-top: 24px;
+}
+.about-us ul{
+    list-style: none;
+}
+.about-us ul li{
+    font-size: 18px;
+    margin-top: 5px;
+}
+.about-us ul li::before{
+    content: "\2022";
+    color: red;
+    font-weight: 800;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    
+}
+
+/*------------------------------------------------------------*/
+/*___________________________theard section____________________*/
+/*------------------------------------------------------------*/
+
+/* .bg-color{
+    background-color:#f1f1f1;
+} */
+
+
+.donor{
+    padding: 100px;
+    background-image: url("../images/red-shiny-drop-blood-isolated-white.png");
+    background-size: 120% 100%;
+    background-position: center;
+    border: transparent;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.need{
+    padding: 100px;
+    background-image: url("../images/red-shiny-drop-blood-isolated-white.png");
+    background-size: 120% 100%;
+    background-position: center;
+    border: transparent;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.bg-status{
+   background-image: url("../images/gallery_4.jpg");
+   background-size: 100% 100%;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-color: rgba(255, 255, 255, 0.9);
+
+}
+
+
+/*-----------------------------------------------------------------*/
+/*___________________________Achievment section____________________*/
+/*-----------------------------------------------------------------*/
+
+
+
+.bg-color{
+    background-color:#f1f1f1;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.item h4{
+text-transform: capitalize;
+}
+
+.counter{
+    font-size: 32px;
+    color:#EF3D32;
+    font-weight: 600;
+}
+
+.icon {
+    border-radius: 0;
+    font-size: 48px;
+    line-height: 50px;
+    margin: 20px 0;
+    color: #333333;
+     }
+
+     .icon:hover{
+        color: #EF3D32;
+        transform: scale(1.3);
+        transition: all 0.3s ease-in-out;
+     }
+
+  .item{
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  }
+
+/* @media (max-width:1023px){
+   
+    .skitter ul li img {
+        width: 75%;
+    }
+} */
+
+/* @media (max-width:1039px){
+   
+    .skitter ul li img {
+        width: 75% !important;
+    }
+
+    .container_skitter { max-width:1039px !important;   height:100vh; } 
+} */
+
+
+
+/*-------------------------------------------------------------------*/
+/*___________________________testimonials section____________________*/
+/*-------------------------------------------------------------------*/
+
+
+.testimonial{
+    background-image: url("../images/testimonials.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position-y: 175px;
+    
+    }
+    
+    /* .testimonial::before{
+        content:"";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        background-image: url("../images/testimonials.webp");
+        background-size: cover;
+        background-color: rgba(255, 255, 255, 0.9);
+    } */
+    
+    .testimonial .carousel-indicators{
+        bottom: -40px;
+    }
+    .testimonial .carousel-indicators li{
+        width: 12px;
+        height: 12px;
+        background-color: rgb(124, 121, 121);
+        border-radius: 50%;
+       
+    }
+    
+    .caption_test{
+       color: rgb(51, 51, 51);
+        font-family: Anton;
+        line-height: 1.4;
+        border-color: rgb(51, 51, 51);
+        padding: 20px 0;
+    }
+    
+    .member-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+    
+    .member-info img{
+        width: 55px!important;
+        border-radius: 55px;
+    }
+    
+    .member-info h3{
+        margin-left: 10px;
+    }
+/*--------------------------------------------------------------*/
+/*___________________________Contact section____________________*/
+/*--------------------------------------------------------------*/
+.content i{
+    font-size: 35px;
+    color: rgb(181, 33, 24);
+}
+
+.icon-font{
+    font-size: 28px;
+}
+.content div {
+    margin-left: 20px;
+}
+
+form input {
+    padding: 10px 15px;
+    margin-bottom: 16px;
+    width: 100%;
+    border: 1px solid #ced4da;
+}
+
+.bg-contact{
+    background-color: rgb(181, 33, 24);
+}
+
+
+/*_____________________________login page___________________________*/
+
+.loginPage, .signupPage{
+        background-image: url("../images/pexels-pedro-figueras-681467.jpg");
+        background-size: 100% 100%;
+        font-family: 'Titillium Web', sans-serif; 
+}
+
+.login, .Signup{
+    background-color: rgba(44, 43, 49, 0.5);
+    color: #fff;
+}
+
+input{
+    margin:10px 0 ;
+    padding: 6px 12px;
+    border-radius: 5px;
+   
+}
+
+.login a ,.Signup a{
+    text-decoration: none;
+    color: #fff;
+}
