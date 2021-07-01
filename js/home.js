@@ -1,24 +1,24 @@
 // for skitter 
 
-$(document).ready(function() {
+$(window).on('load', function() {
     $(".skitter-large").skitter({
        
         fullscreen:true,
         theme:"clean",
     
         animation: 'random',
-        responsive: {
-          small: {
-            animation: 'fade',
-            max_width: 768,
-            suffix: '-small'
-          },
-          medium: {
-            animation: 'directionRight',
-            max_width: 1024,
-            suffix: '-medium'
-          }
-        }
+        // responsive: {
+        //   small: {
+        //     animation: 'fade',
+        //     max_width: 768,
+        //     suffix: '-small'
+        //   },
+        //   medium: {
+        //     animation: 'directionRight',
+        //     max_width: 1024,
+        //     suffix: '-medium'
+        //   }
+        // }
     });
   });
 
