@@ -22,7 +22,13 @@ $(window).on('load', function() {
     });
   });
 
-
+//scroll to section
+ $(".nav-link").click(function(){
+   let targetHref = $(this).atrr("href");
+   $('html','body').animate({
+     scrollTop: $(targetHref).offset().top
+   },1000);
+ })
 // globale variable
 
 let logEmail= document.getElementById("logEmail");
