@@ -44,7 +44,7 @@ let confirmSuccess = document.getElementById("confirmSuccess");
 
 
 function validationName(){
-  let nameRegex =  /^[a-z A-Z0-9]{3,10}$/;
+  let nameRegex =  /^[a-z0-9]{3,10}$/;
   if (!nameRegex.test(signName.value)){
     signName.classList.add("is-invalid");
     signName.classList.remove("is-valid");
@@ -59,7 +59,7 @@ function validationName(){
 }
 
 function validationEmail(){
-let emailRegex =   /^[a-zA-Z]{3,15}[0-9]{0,}(@)[a-z]{4,8}\.(com)$/;
+let emailRegex =   /^[a-z]{3,15}[0-9]{0,}(@)[a-z]{4,8}\.(com)$/;
 if (!emailRegex.test(signEmail.value)){
   signName.classList.add("is-invalid");
   signName.classList.remove("is-valid");
@@ -113,8 +113,8 @@ var existAccount = document.getElementById("existAccount");
 function excistUser(){
   
    for(var i=0; i<userList.length; i++){
-       if(userList[i].userName.toLowerCase() == signName.value.toLowerCase() ||
-        userList[i].userEmail.toLowerCase() == signEmail.value.toLowerCase()){
+       if(userList[i].userName == signName.value ||
+        userList[i].userEmail == signEmail.value){
             
             existAccount.classList.replace('d-none', 'd-block');
             signName.classList.remove("is-valid");
@@ -133,6 +133,10 @@ function signUP(){
   if (isEmpty() == false) {
     let exist = document.getElementById('exist')
     exist.classList.replace('d-none', 'd-block');
+    existAccount.classList.replace('d-block', 'd-none');
+    confirmFailed.classList.replace("d-block", "d-none");
+    confirmSuccess.classList.replace("d-block", "d-none");
+
     return false
 }
 
@@ -155,12 +159,13 @@ confirmFailed.classList.replace("d-block", "d-none");
 
 }else if( excistUser()==true){
   existAccount.classList.replace('d-none', 'd-black');
-  confirmSuccess.classList.replace("d-none", "d-block");
+  confirmSuccess.classList.replace("d-block", "d-none");
   confirmFailed.classList.replace("d-block", "d-none");
 }else{
    // when sign up Failed show this massage   
 confirmFailed.classList.replace("d-none", "d-block");
 confirmSuccess.classList.replace("d-block", "d-none");
+existAccount.classList.replace('d-block', 'd-none');
 }
 }
 
@@ -171,21 +176,25 @@ confirmSuccess.classList.replace("d-block", "d-none");
 
 
 function logIN(){
+ 
   if (logEmail.value == "" || logPass.value == "" ){
       var fillInp = document.getElementById("fillInp");
       fillInp.classList.replace('d-none', 'd-block');
-      
+      errorMsg.classList.replace("d-block", "d-none")
+
   }else{
-      for(var i= 0 ; i<userList.length; i++){
+    
+    for(var i=0; i<userList.length; i++){
 
-          if(userList[i].userEmail.toLowerCase() == logEmail.value.toLowerCase()
-          && userList[i].userPass.toLowerCase() == logPass.value.toLowerCase() )
-          {
-            btnLogin.setAttribute("herf", "index.html")
-            errorMsg.classList.replace("d-block", "d-none");
+      if(userList[i].userEmail == logEmail.value &&
+       userList[i].userpass == logPass.value){
+          
+            btnLogin.setAttribute("href", "index.html")
+            errorMsg.classList.add("d-none");
           }else{
-
+         
             errorMsg.classList.replace("d-none", "d-block");
+
           }
         }
       }
