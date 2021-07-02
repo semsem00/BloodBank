@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
 /*--------------------------------------------------------------------*/
 /*___________________________navbar & home section____________________*/
 /*--------------------------------------------------------------------*/
@@ -12,7 +15,8 @@ nav{
 }
 h2{
     font-size:40px ;
-    font-weight: 700;
+    font-weight: bolder;
+    font-family: 'Amiri', serif;
 }
 
 h3{
@@ -56,35 +60,22 @@ h3{
     right: -53%;
 
 }
-/* .skitter-square .prev_button {
-    top: 80% !important;
-    right: -130px !important;
-}
-.skitter-square .next_button {
-    top: 80% !important;
-    right: -76px !important;
-}   */
+
 
 .skitter > span{
     display: block;
     left:80% !important;
+}
+.skitter .info_slide_dots {
+    position: relative;
+    z-index: 0;
 }
 .skitter {
     
      background:none !important;
 }
 
-/* .skitter{
-    max-width: 100%;
-    height:100vh;
-} */
- 
 
-/* .container_skitter { max-width:1920px !important;   height:100vh; }  */
-
-/* .box_skitter { width:100vw !important; height:100vh !important; }  */
-
-/* .box_skitter img { height:100vh; max-width: 100vw !important;  }  */
 
 .navbar-light .navbar-nav .nav-link {
     color: #000;
@@ -166,9 +157,7 @@ h3{
 /*___________________________theard section____________________*/
 /*------------------------------------------------------------*/
 
-/* .bg-color{
-    background-color:#f1f1f1;
-} */
+
 .bg-donar{
     background-image: url("../images/doctor-bg.jpg");
     background-size: 100% 100%;
@@ -285,7 +274,7 @@ text-transform: capitalize;
     
     .caption_test{
        color: rgb(51, 51, 51);
-        font-family: Anton;
+        /* font-family: Anton; */
         line-height: 1.4;
         border-color: rgb(51, 51, 51);
         padding: 20px 0;
@@ -362,6 +351,9 @@ input{
     color: #fff;
 }
 
+#errorMsg{
+    display: none;
+}
 
 @media (max-width: 991px){
     .skitter .next_button {
