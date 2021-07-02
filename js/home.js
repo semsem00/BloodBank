@@ -180,8 +180,8 @@ function logIN(){
   if (logEmail.value == "" || logPass.value == "" ){
       var fillInp = document.getElementById("fillInp");
       fillInp.classList.replace('d-none', 'd-block');
-      errorMsg.classList.replace("d-block", "d-none")
-
+      // errorMsg.classList.replace("d-block", "d-none");
+      errorMsg.classList.add("d-none");
   }else{
     
     for(var i=0; i<userList.length; i++){
@@ -190,7 +190,7 @@ function logIN(){
        userList[i].userpass == logPass.value){
           
             btnLogin.setAttribute("href", "index.html")
-            errorMsg.classList.add("d-none");
+            // errorMsg.classList.add("d-none");
           }else{
          
             errorMsg.classList.replace("d-none", "d-block");
