@@ -252,11 +252,10 @@ text-transform: capitalize;
 
 
 .testimonial{
-    background-image: url("../images/testimonials.webp");
+    background: url("../images/testimonials.webp") no-repeat;
     background-size: 100% 100%;
-    background-repeat: no-repeat;
     background-position-y: 175px;
-    
+    width: 70%;
     }
     
     
@@ -287,13 +286,16 @@ text-transform: capitalize;
         justify-content: center;
         align-items: center;
         text-align: center;
-        
     }
     
     .member-info img{
-        width: 55px!important;
+        width: 55px !important;
         border-radius: 55px;
-    }
+        -webkit-border-radius: 55px;
+        -moz-border-radius: 55px;
+        -ms-border-radius: 55px;
+        -o-border-radius: 55px;
+}
     
     .member-info h3{
         margin-left: 10px;
