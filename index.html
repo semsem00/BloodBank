@@ -16,7 +16,7 @@
 <!--_________________________Navbar section_____________________________-->
 <!------------------------------------------------------------------------>
     <section >
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed">
         <a class="navbar-brand mb-0 h1 .nav-color" href="#"
           >BLOOD <sub class="sub-color">BANK</sub></a
         >
@@ -140,11 +140,120 @@
       </div>
     </section>
 <!------------------------------------------------------------------------>
+<!--_________________________Search Section___________________________-->
+<!------------------------------------------------------------------------>
+    <section class='d-none' id='SearchSection'>
+        <div class='SearchLayer  container-fluid vh-100 position-fixed  pt-5 '>
+          <div class="container bg-light py-4 w-50 mt-5 position-relative ">
+            <i class="fas fa-window-close position-absolute text-info" id="close"></i>
+            <div  class=" rounded  m-auto    ">
+        
+              <div class="w-100 d-flex justify-content-center  ">
+                
+                <div class="d-flex justify-content-center w-100">
+                  <div class="w-25  mt-3 ">
+                    <select class="form-control " id="SearchBloodType">
+                      <option selected hidden disabled>Blood Type</option>
+                      <option>A+</option>
+                      <option>A-</option>
+                      <option>B+</option>
+                      <option>B-</option>
+                      <option>O+</option>
+                      <option>O-</option>
+                      <option>AB+</option>
+                      <option>AB-</option>
+                    </select>
+                  </div>
+
+                  <div class="w-50 mt-3 mr-2">
+                    <select class="form-control location" id='SearchCity'>
+                      <option hidden selected disabled>Choose City</option>
+                      <option value="51">أسـوان</option>
+                      <option value="49">اسيوط</option>
+                      <option value="50">الأقصر</option>
+                      <option value="47">الإسكندرية</option>
+                      <option value="41">الإسماعيلية</option>
+                      <option value="38">البحيره</option>
+                      <option value="39">الجيزه</option>
+                      <option value="510">الحسنيه</option>
+                      <option value="588">الخارجة</option>
+                      <option value="589">الداخلة</option>
+                      <option value="414">الدقهلية</option>
+                      <option value="508">الزقازيق</option>
+                      <option value="57">السلوم</option>
+                      <option value="42">السويس</option>
+                      <option value="37">الشرقية</option>
+                      <option value="55">الطور</option>
+                      <option value="54">العريش</option>
+                      <option value="517">الغربية</option>
+                      <option value="58">الغردقه</option>
+                      <option value="590">الفرافرة</option>
+                      <option value="52">الفيوم</option>
+                      <option value="36">القاهره</option>
+                      <option value="413">القليوبية</option>
+                      <option value="467">المحلة الكبرى</option>
+                      <option value="45">المنصورة</option>
+                      <option value="410">المنوفية</option>
+                      <option value="40">المنيا</option>
+                      <option value="587">الوادي الجديد</option>
+                      <option value="48">بنى سويف</option>
+                      <option value="46">بورسعيد</option>
+                      <option value="399">حلوان</option>
+                      <option value="44">دمياط</option>
+                      <option value="469">ديرب نجم</option>
+                      <option value="56">رأس البر</option>
+                      <option value="412">رفح</option>
+                      <option value="402">سوهاج</option>
+                      <option value="53">شرم الشيخ</option>
+                      <option value="584">صان الحجر</option>
+                      <option value="470">صفط زريق</option>
+                      <option value="518">طنطا</option>
+                      <option value="509">فاقوس</option>
+                      <option value="398">قنا</option>
+                      <option value="403">كفر الشيخ</option>
+                      <option value="592">كفر صقر</option>
+                      <option value="507">منيا القمح</option>
+                    </select>
+                  </div>
+                  <button class='btn btn-info saerchButton h-75 mt-3'> <i class="fas fa-search "></i> </button>
+                  </div>
+              </div>
+
+              <!-- ----------------Output Table--------------------------- -->
+              <h3 class='result text-danger mt-2'></h3>
+              <table class="table mt-3 d-none ">
+                  <thead>
+                      <th>Name</th>
+                      <th>E-Mail</th>
+                      <th>Phone</th>
+                    
+                      
+                  </thead>
+                  <tbody class='TableBody'>
+                      
+                  </tbody>
+
+              </table>
+      
+            </div>
+          </div>
+              
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+<!------------------------------------------------------------------------>
 <!--_________________________About us section___________________________-->
 <!------------------------------------------------------------------------>
-    <section class="about-us my-5" id="about">
+    <section class="about-us my-5 pt-5" id="about">
       <div class="container">
-        <h2 class="lines text-center position-relative pb-3">ABOUT US</h2>
+        <h2 class="lines text-center position-relative pb-3 pt-3 ">ABOUT US</h2>
         <div class="row mt-5">
           <div class="col-md-6">
             <div class="about-us">
@@ -174,7 +283,7 @@
 <!------------------------------------------------------------------------>
 <!--_________________________Status section_____________________________-->
 <!------------------------------------------------------------------------>
-    <section class=" overflow-hidden " id="status">
+    <section class=" overflow-hidden pt-5" id="status">
       <div class="row">
         <div class="col-md-6 bg-donar p-5 ">
           <div class="item-status">
@@ -195,7 +304,7 @@
               veniam exercitationem quibusdam ex eius at provident sapiente.
             
             </p>
-            <button class="btn btn-light">Get Blood</button>
+            <button class="btn btn-light" id='GetBlood'>Get Blood</button>
           </div>
         </div>
       </div>
@@ -204,8 +313,8 @@
 <!------------------------------------------------------------------------>
 <!--_________________________Achievment section_____________________________-->
 <!------------------------------------------------------------------------>    
-    <section class="p-5 bg-color overflow-hidden" id="achivement">
-      <h2 class="lines pb-3 text-center position-relative">OUR ACHIEVEMENT</h2>
+    <section class="p-5 bg-color overflow-hidden " id="achivement">
+      <h2 class="lines py-3 text-center position-relative">OUR ACHIEVEMENT</h2>
       <div class="row mt-5">
         <div class="col-md-3">
           <div class="item">
@@ -241,7 +350,7 @@
 <!--_________________________Testimonial section____________________-->
 <!-------------------------------------------------------------------->
     <section
-      class="testimonial m-auto mt-5 position-relative py-5 overflow-hidden"
+      class="testimonial mx-auto mt-3  position-relative py-5 overflow-hidden"
       id="testimonial"
     >
       <div class="text-center position-relative">
@@ -271,7 +380,7 @@
               <div class="carousel-item active">
                 <div class="row">
                   <div class="col-sm-12">
-                    <div class="member">
+                    <div class="member ">
                       <p>
                         They have the best team of experienced Cardiac
                         doctors
@@ -352,7 +461,8 @@
 <!------------------------------------------------------------------------>
 <!--_________________________Contact section_____________________________-->
 <!------------------------------------------------------------------------>
-    <section class="Contact my-5 container overflow-hidden" id="contact">
+<div class="container-fluid bg-light py-3 mt-5">
+    <section class="Contact my-5 container overflow-hidden " id="contact">
       <h2 class="text-center mb-4 position-relative lines pb-3 ">Contact Us</h2>
       <div class="row">
         <div class="col-md-6">
@@ -415,6 +525,7 @@
         </div>
       </div>
     </section>
+  </div>
     <div class="container-fluid bg-contact text-center text-white p-2">
       <p>© Copyrights 2021 - 2022.BLOOD BANK.All Rights Reserved.</p>
     </div>
