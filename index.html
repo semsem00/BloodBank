@@ -1,542 +1,580 @@
-<!-- from new branch -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blood Bank</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link href="css/skitter.css" type="text/css" media="all" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+  <title>Blood Bank</title>
+</head>
+<body>
 
-<!------------------------------------------------------------------------>
-<!--_________________________Navbar section_____________________________-->
-<!------------------------------------------------------------------------>
-    <section >
-      <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed">
-        <a class="navbar-brand mb-0 h1 .nav-color" href="#"
-          >BLOOD <sub class="sub-color">BANK</sub></a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <!--  
+    Start Donar In The Fly
+  -->
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#status">Status</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#achivement">Achivement</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#testimonial">Testimonial</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <a
-              class="btn btn-outline-danger my-2 my-sm-0 ml-3"
-              type="submit"
-               href="signup.html"
-            >
-              Sign up
+    <div id="donar_popup">
+      <div class="edge_popup container py-4">
+        <div class="about_donar_section text-center">
+          <h3 class="text-uppercase text-white">donar blood</h3>
+        </div>
+
+        <div id="invalid-inputs" class="m-auto py-4">
+          <div class="error d-flex flex-column justify-content-center align-items-center">
+            <h2 class="text-center text-white" style="cursor: default;">Sorry Inputs Must Be Full</h2>
+            <a class="btn btn-warning px-4 py-2 skip-error">Ok</a>
+          </div>
+        </div>
+
+        <div class="close-icon">
+          <i class="fas fa-window-close"></i>
+        </div>
+
+        <form class="col-lg-12">
+          <div class="row">
+            <div class="fn col">
+              <input type="text" id="FnInput" class="form-control" placeholder="First name">
+            </div>
+            <div class="ln col">
+              <input type="text" id="LnInput" class="form-control" placeholder="Last name">
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="col-6 pl-0 mt-3 form-group">
+              <select class="form-control bloodType" id="exampleFormControlSelect1">
+                <option selected hidden disabled>Blood Type</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+              </select>
+            </div>
+        
+            <div class="col-6 pr-0 mt-3 form-group">
+              <select class="form-control location">
+                <option hidden selected disabled>Choose City</option>
+                <option value="51">أسـوان</option>
+                <option value="49">اسيوط</option>
+                <option value="50">الأقصر</option>
+                <option value="47">الإسكندرية</option>
+                <option value="41">الإسماعيلية</option>
+                <option value="38">البحيره</option>
+                <option value="39">الجيزه</option>
+                <option value="510">الحسنيه</option>
+                <option value="588">الخارجة</option>
+                <option value="589">الداخلة</option>
+                <option value="414">الدقهلية</option>
+                <option value="508">الزقازيق</option>
+                <option value="57">السلوم</option>
+                <option value="42">السويس</option>
+                <option value="37">الشرقية</option>
+                <option value="55">الطور</option>
+                <option value="54">العريش</option>
+                <option value="517">الغربية</option>
+                <option value="58">الغردقه</option>
+                <option value="590">الفرافرة</option>
+                <option value="52">الفيوم</option>
+                <option value="36">القاهره</option>
+                <option value="413">القليوبية</option>
+                <option value="467">المحلة الكبرى</option>
+                <option value="45">المنصورة</option>
+                <option value="410">المنوفية</option>
+                <option value="40">المنيا</option>
+                <option value="587">الوادي الجديد</option>
+                <option value="48">بنى سويف</option>
+                <option value="46">بورسعيد</option>
+                <option value="399">حلوان</option>
+                <option value="44">دمياط</option>
+                <option value="469">ديرب نجم</option>
+                <option value="56">رأس البر</option>
+                <option value="412">رفح</option>
+                <option value="402">سوهاج</option>
+                <option value="53">شرم الشيخ</option>
+                <option value="584">صان الحجر</option>
+                <option value="470">صفط زريق</option>
+                <option value="518">طنطا</option>
+                <option value="509">فاقوس</option>
+                <option value="398">قنا</option>
+                <option value="403">كفر الشيخ</option>
+                <option value="592">كفر صقر</option>
+                <option value="507">منيا القمح</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" id="EmailInput" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+          <div class="form-group">
+            <input type="text" id="MobInput" class="form-control" id="exampleFormControlInput1" placeholder="ex.01XX XXX XXXX">
+          </div>
+          <div class="d-flex justify-content-center">
+            <a id="SubBtn" class="btn btn-danger">Submit</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  <!--  
+    End Donar In The Fly
+  -->
+
+  <!--
+    Start Navbar
+  -->
+
+    <div id="navigation" class="position-relative">
+      <nav id="secNav" class="navbar navbar-expand-lg navbar-light bg-white py-0">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <h1><span id="blood" class="text-danger">Blood</span> <span id="bank">Bank</span></h1>
           </a>
-            <a
-              class="btn btn-outline-danger my-2 my-sm-0 ml-3"
-              type="submit"
-              href="login.html"
-            >
-              Login
-          </a>
-          </form>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto text-sm-center">
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold status">Status</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold achievment">Acvievment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold testimonial">Testimonial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  font-weight-bold contact">ContactUs</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
-    </section>
 
-<!------------------------------------------------------------------------>
-<!--___________________________Home section_____________________________-->
-<!------------------------------------------------------------------------>  
-    <section class="home vh-100 overflow-hidden container-fluid" id="home">
-      <div class="skitter skitter-large with-dots m-auto skitter-width ">
-        <ul>
-          <li>
-            <a href="#cut">
-              <img src="images/home_1_slider_1.jpg" class="cut w-100" />
-            </a>
-            <div class="label_text">
-              <h3>
-                Donate blood,<strong class="main-color">save life !</strong>
-              </h3>
-              <h2>
-                YOUR BLOOD
-                <br />
-                CAN BRING SMILE
-                <br />
-                IN OTHER PERSON FACE
-              </h2>
-            </div>
-          </li>
-          <li>
-            <a href="#swapBlocks">
-              <img src="images/home_1_slider_2.jpg" class="swapBlocks w-100" />
-            </a>
-            <div class="label_text">
-              <h3>
-                Donate blood,<strong class="main-color">save life !</strong>
-              </h3>
-              <h2 class="mb-3">
-                DONATE BLOOD
-                <br />
-
-                AND INSPIRES OTHERS.
-              </h2>
-              <a href="#" class="btn btn-danger btn-lg">Donate Now</a>
-            </div>
-          </li>
-          <li>
-            <a href="#swapBarsBack" class="position-relative">
-              <img src="images/12349205.jpg" class="swapBarsBack w-100" />
-            </a>
-            <div class="label_text">
-              <h2 class="mb-3">DID YOU KNOW?</h2>
-              <h3>
-                One blood dontation
-                <br />
-                Could save up <strong class="main-color">three</strong> lives
-              </h3>
-            </div>
-          </li>
-          <li>
-            <a href="#swapBarsBack">
-              <img src="images/jpg.jpg" class="swapBarsBack w-75" />
-            </a>
-            <div class="label_text text-center">
-              <h4 class="mb-5">Awesome Words From Members</h4>
-              <span class="line"></span>
-              <h2>JOIN WITH US AND SAVE LIFE</h2>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-<!------------------------------------------------------------------------>
-<!--_________________________Search Section___________________________-->
-<!------------------------------------------------------------------------>
-    <section class='d-none' id='SearchSection'>
-        <div class='SearchLayer  container-fluid vh-100 position-fixed  pt-5 '>
-          <div class="container bg-light py-4 w-50 mt-5 position-relative ">
-            <i class="fas fa-window-close position-absolute text-info" id="close"></i>
-            <div  class=" rounded  m-auto    ">
+      <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark py-0">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <h1><span id="blood" class="text-danger">Blood</span> <span id="bank">Bank</span></h1>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         
-              <div class="w-100 d-flex justify-content-center  ">
-                
-                <div class="d-flex justify-content-center w-100">
-                  <div class="w-25  mt-3 ">
-                    <select class="form-control " id="SearchBloodType">
-                      <option selected hidden disabled>Blood Type</option>
-                      <option>A+</option>
-                      <option>A-</option>
-                      <option>B+</option>
-                      <option>B-</option>
-                      <option>O+</option>
-                      <option>O-</option>
-                      <option>AB+</option>
-                      <option>AB-</option>
-                    </select>
-                  </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto text-sm-center">
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold status">Status</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold achievment">Acvievment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold testimonial">Testimonial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  font-weight-bold contact">ContactUs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-                  <div class="w-50 mt-3 mr-2">
-                    <select class="form-control location" id='SearchCity'>
-                      <option hidden selected disabled>Choose City</option>
-                      <option value="51">أسـوان</option>
-                      <option value="49">اسيوط</option>
-                      <option value="50">الأقصر</option>
-                      <option value="47">الإسكندرية</option>
-                      <option value="41">الإسماعيلية</option>
-                      <option value="38">البحيره</option>
-                      <option value="39">الجيزه</option>
-                      <option value="510">الحسنيه</option>
-                      <option value="588">الخارجة</option>
-                      <option value="589">الداخلة</option>
-                      <option value="414">الدقهلية</option>
-                      <option value="508">الزقازيق</option>
-                      <option value="57">السلوم</option>
-                      <option value="42">السويس</option>
-                      <option value="37">الشرقية</option>
-                      <option value="55">الطور</option>
-                      <option value="54">العريش</option>
-                      <option value="517">الغربية</option>
-                      <option value="58">الغردقه</option>
-                      <option value="590">الفرافرة</option>
-                      <option value="52">الفيوم</option>
-                      <option value="36">القاهره</option>
-                      <option value="413">القليوبية</option>
-                      <option value="467">المحلة الكبرى</option>
-                      <option value="45">المنصورة</option>
-                      <option value="410">المنوفية</option>
-                      <option value="40">المنيا</option>
-                      <option value="587">الوادي الجديد</option>
-                      <option value="48">بنى سويف</option>
-                      <option value="46">بورسعيد</option>
-                      <option value="399">حلوان</option>
-                      <option value="44">دمياط</option>
-                      <option value="469">ديرب نجم</option>
-                      <option value="56">رأس البر</option>
-                      <option value="412">رفح</option>
-                      <option value="402">سوهاج</option>
-                      <option value="53">شرم الشيخ</option>
-                      <option value="584">صان الحجر</option>
-                      <option value="470">صفط زريق</option>
-                      <option value="518">طنطا</option>
-                      <option value="509">فاقوس</option>
-                      <option value="398">قنا</option>
-                      <option value="403">كفر الشيخ</option>
-                      <option value="592">كفر صقر</option>
-                      <option value="507">منيا القمح</option>
-                    </select>
-                  </div>
-                  <button class='btn btn-info saerchButton h-75 mt-3'> <i class="fas fa-search "></i> </button>
-                  </div>
-              </div>
-
-              <!-- ----------------Output Table--------------------------- -->
-              <h3 class='result text-danger mt-2'></h3>
-              <table class="table mt-3 d-none ">
-                  <thead>
-                      <th>Name</th>
-                      <th>E-Mail</th>
-                      <th>Phone</th>
-                    
-                      
-                  </thead>
-                  <tbody class='TableBody'>
-                      
-                  </tbody>
-
-              </table>
-      
+      <div id="carouselExampleCaptions" class="carousel slide" style="user-select: none;" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/Slider/slider-1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption w-50 d-md-block">
+              <h5 class="change" style="font-size: 4.5rem;">Focused <span>on strategy.</span></h5>
             </div>
           </div>
-              
+          <div class="carousel-item">
+            <img src="images/Slider/slider-2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption w-50 d-md-block">
+              <h5 class="change" style="font-size: 4rem;">We build <span>great brands.</span></h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/Slider/slider-3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption w-50 d-md-block">
+              <h5 class="change" style="font-size: 4.5rem;">Advanced in <span>digital works.</span></h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/Slider/slider-4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption w-50 d-md-block">
+              <h5 class="change" style="font-size: 4.5rem;">Advanced in <span>digital works.</span></h5>
+            </div>
+          </div>
         </div>
-    </section>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <div class="animation">
+        <span class="drop">
+
+        </span>
+      </div>
+    </div>
 
 
+  <!-- 
+    End Navbar 
+  -->
 
+  <!--  
+    Start About
+  -->
 
-
-
-
-
-<!------------------------------------------------------------------------>
-<!--_________________________About us section___________________________-->
-<!------------------------------------------------------------------------>
-    <section class="about-us my-5 pt-5" id="about">
+    <div id="about" class="py-5">
       <div class="container">
-        <h2 class="lines text-center position-relative pb-3 pt-3 ">ABOUT US</h2>
-        <div class="row mt-5">
-          <div class="col-md-6">
-            <div class="about-us">
-              <h2 class="pb-4">Who We Are?</h2>
-              <span class="line mt-4"></span>
-              <p>
-                Blood Buddies is for public donation center with blood donation
-                members in the changing health care system
-              </p>
-              <ul>
-                <li>Specialist blood donors and clinical supervision.</li>
-                <li>Increasing communication with our members</li>
-                <li>High quality assessment, diagnosis and treatment.</li>
-                <li>Examine critically to ensure alignment.</li>
-                <li>The extra care of a multi-disciplinary team.</li>
-              </ul>
-            </div>
+        <div class="col-md-12 mx-md-0">
+          <div class="head_for_about d-flex flex-column justify-content-center text-center text-uppercase col-md-12">
+            <h2 class="about_title">about us</h2>
+            <div id="lines"></div>
           </div>
-          <div class="col-md-6">
-            <div class="about-img">
-              <img src="images/about_feat_bg.jpg" class="w-100" />
+          <div class="row col-12 mx-md-0">
+            <div class="who col-lg-6 col-md-12">
+              <div class="who_title col-md-12">
+                <h2>Who We Are?</h2>
+              </div>
+                <div class="who_desc col-md-12 text-muted">
+                <p>
+                  Blood Buddies is for public donation center with blood donation members in the changing health care system
+                </p>
+              </div>
+              <div class="who_list col-md-12">
+                <ul class="text-muted">
+                  <li>Specialist blood donors and clinical supervision.</li>
+                  <li>Increasing communication with our members.</li>
+                  <li>High quality assessment, diagnosis and treatment.</li>
+                  <li>Examine critically to ensure alignment.</li>
+                  <li>The extra care of a multi-disciplinary team.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="about_img col-lg-6 col-md-12 overflow-hidden">
+              <div class="col-md-12">
+                <img src="images/About/about.jpg" class="w-100">
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-<!------------------------------------------------------------------------>
-<!--_________________________Status section_____________________________-->
-<!------------------------------------------------------------------------>
-    <section class=" overflow-hidden pt-5" id="status">
-      <div class="row">
-        <div class="col-md-6 bg-donar p-5 ">
-          <div class="item-status">
-            <h3 class="text-danger">Are You a Donar?</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
-              veniam exercitationem quibusdam ex eius at provident sapiente.
-            </p>
-            <button class="btn btn-danger">Donate Now</button>
+    </div>
+
+  <!--  
+    Start About
+  -->
+
+  <!--  
+    Start Status
+  -->
+
+    <div id="status" class="py-5">
+      <div class="container">
+        <div class="row col-md-12">
+          <div class="donar text-center col-md-6">
+            <h3 class="text-capitalize text-white">are you a donar?</h3>
+            <div class="doner-desc">
+            <p class="text-white-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quod consectetur aperiam consequatur harum placeat quasi debitis distinctio.</p>
+            </div>
+            <div class="btn_doner d-flex justify-content-center">
+              <button class="btn btn-danger text-center my-3 text-light text-capitalize donation">donation</button>
+            </div>
           </div>
+
+          <div class="need text-center col-md-6">
+            <h3 class="text-capitalize text-white">you need blood?</h3>
+            <p class="text-white-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quod consectetur aperiam consequatur harum placeat quasi debitis distinctio.</p>
+            <div class="btn_doner d-flex justify-content-center">
+              <button class="btn btn-danger text-center text-light text-capitalize get_blood">get blood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!--  
+    End Status
+  -->
+
+  <!--  
+    Start Achievement
+  -->
+
+    <div id="achievment" class="py-5 bg-light">
+      <div class="container-fluid">
+        <div class="col-md-12 text-center achievment_title">
+          <h2 class="text-uppercase">our achievment</h2>
+          <div id="lines"></div>
         </div>
 
-        <div class="col-md-6 bg-need p-5">
-          <div class="item-status">
-            <h3>Do You Need Blood?</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
-              veniam exercitationem quibusdam ex eius at provident sapiente.
-            
-            </p>
-            <button class="btn btn-light" id='GetBlood'>Get Blood</button>
+        <div class="container-fluid all-items">
+          <div class="row col-12 d-flex justify-content-center align-items-center">
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-3 mb-md-3 d-flex justify-content-center align-items-center items">
+              <div id="edge_of_el" class="col-12 item text-center">
+                <div class="icon">
+                  <i class="fa fa-heartbeat"></i>
+                </div>
+                  <span class="counter">2578</span>
+                  <h4>Success</h4>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-3 mb-md-3 d-flex justify-content-center align-items-center items">
+              <div id="edge_of_el" class="col-12 item text-center">
+                <div class="icon">
+                  <i class="fa fa-stethoscope icon"></i>
+                </div>
+                  <span class="counter">3235</span>
+                  <h4>Happy Donors</h4>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-3 mb-md-3 d-flex justify-content-center align-items-center items">
+              <div id="edge_of_el" class="col-12 item text-center">
+                <div class="icon">
+                  <i class="fa fa-users icon"></i>
+                </div>
+                  <span class="counter">3568</span>
+                  <h4>Shappy Recipient</h4>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-3 mb-md-3  d-flex justify-content-center align-items-center items">
+              <div id="edge_of_el" class="col-12 item text-center">
+                <div class="icon">
+                  <i class="fa fa-building icon"></i>
+                </div>
+                  <span class="counter">1364</span>
+                  <h4>Total Awards</h4>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    
-    </section>
-<!------------------------------------------------------------------------>
-<!--_________________________Achievment section_____________________________-->
-<!------------------------------------------------------------------------>    
-    <section class="p-5 bg-color overflow-hidden " id="achivement">
-      <h2 class="lines py-3 text-center position-relative">OUR ACHIEVEMENT</h2>
-      <div class="row mt-5">
-        <div class="col-md-3">
-          <div class="item">
-            <i class="fa fa-heartbeat icon"></i>
-            <span class="counter">2578</span>
-            <h4>Success</h4>
-          </div>
+
+      
+
+    </div>
+
+  <!--  
+    Start Achievement
+  -->
+
+  <!--  
+    Start Testimonial
+  -->
+
+    <div id="testimonial" class="py-5 bg-light">
+      <div class="container text-center test">
+        <div class="persons first_person">
+          <img src="images/Testimonial/client-1.png">
+          <p class="name">
+            <i class="fas fa-quote-left"></i> Name One <i class="fas fa-quote-right"></i>
+          </p>
+          <p class="desc text-muted">
+            They have the best team of experienced Cardiac doctors who diagnosed and treated my grandmother's condition.
+          </p>
         </div>
-        <div class="col-md-3">
-          <div class="item">
-            <i class="fa fa-stethoscope icon"></i>
-            <span class="counter">3235</span>
-            <h4>Happy Donors</h4>
-          </div>
+
+        <div class="persons second_person">
+          <img src="images/Testimonial/client-3.png">
+          <p class="name">
+            <i class="fas fa-quote-left"></i> Name Two <i class="fas fa-quote-right"></i>
+          </p>
+          <p class="desc text-muted">
+            They are one of the best Cardiologists in town. I am happy that I took their suggestion for my father’s treatment
+          </p>
         </div>
-        <div class="col-md-3">
-          <div class="item">
-            <i class="fa fa-users icon"></i>
-            <span class="counter">3568</span>
-            <h4>SHappy Recipient</h4>
-          </div>
+
+        <div class="persons third_person">
+          <img src="images/Testimonial/client-4.png">
+          <p class="name">
+            <i class="fas fa-quote-left"></i> Name Three <i class="fas fa-quote-right"></i>
+          </p>
+          <p class="desc text-muted">
+            Post Bypass Surgery my uncle was in the hospital for recovery. We were really satisfied with the care taken.
+          </p>
         </div>
-        <div class="col-md-3">
-          <div class="item">
-            <i class="fa fa-building icon"></i>
-            <span class="counter">1364</span>
-            <h4>Total Awards</h4>
-          </div>
+
+        <div class="persons fourth_person">
+          <img src="images/Testimonial/client-5.png">
+          <p class="name">
+            <i class="fas fa-quote-left"></i> Name Four <i class="fas fa-quote-right"></i>
+          </p>
+          <p class="desc text-muted">
+            They have the best team of experienced Cardiac doctors who diagnosed and treated my grandmother's condition.
+          </p>
         </div>
-      </div>
-    </section>  
-<!-------------------------------------------------------------------->
-<!--_________________________Testimonial section____________________-->
-<!-------------------------------------------------------------------->
-    <section
-      class="testimonial mx-auto mt-3  position-relative py-5 overflow-hidden"
-      id="testimonial"
-    >
-      <div class="text-center position-relative">
-        <div class="container py-64">
-          <div
-            id="carouselExampleIndicators"
-            class="carousel slide"
-            data-ride="carousel"
-          >
-            <ol class="carousel-indicators">
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="0"
-                class="active"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="1"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="2"
-              ></li>
-            </ol>
-            <div class="carousel-inner w-50 m-auto overflow-hidden">
-              <h2 class="caption_test position-relative lines pb-3">Testimonial</h2>
-              <div class="carousel-item active">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="member ">
-                      <p>
-                        They have the best team of experienced Cardiac
-                        doctors
-                        who diagnosed and treated my grandmother's condition.
-                      </p>
-                      <div class="member-info my-2">
-                        <img src="images/testimonial-2.jpg" class="shadow" />
-                        <h4>xavi alonso</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="member">
-                      <p>
-                        They are one of the best Cardiologists in town.
-                        Happy that I took their suggestion for my father’s
-                        treatment.
-                      </p>
-                      <div class="member-info my-2">
-                        <img src="images/testimonial-4.jpg" class="shadow" />
-                        <h4>Marta Socrate</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="member">
-                      <p>
-                        Post Bypass Surgery my uncle was in the hospital for
-                        recovery. We were really satisfied with the care taken.
-                      </p>
-                      <div class="member-info my-2">
-                        <img
-                          src="images/CF451BF3C107381989954D48EB_1583385769464.jpg"
-                          class="shadow"
-                        />
-                        <h4>Ajay Singh</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a
-              class="carousel-control-prev d-none"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="prev" >
-              <span
-                class="carousel-control-prev-icon d-none"
-                aria-hidden="true"
-              ></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a
-              class="carousel-control-next d-none"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon d-none"
-                aria-hidden="true"
-              ></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
+
+        <div class="persons fivth_person">
+          <img src="images/Testimonial/client-6.png">
+          <p class="name">
+            <i class="fas fa-quote-left"></i> Name Five <i class="fas fa-quote-right"></i>
+          </p>
+          <p class="desc text-muted">
+            Post Bypass Surgery my uncle was in the hospital for recovery. We were really satisfied with the care taken.
+          </p>
         </div>
       </div>
-    </section>
-<!------------------------------------------------------------------------>
-<!--_________________________Contact section_____________________________-->
-<!------------------------------------------------------------------------>
-<div class="container-fluid bg-light py-3 mt-5">
-    <section class="Contact my-5 container overflow-hidden " id="contact">
-      <h2 class="text-center mb-4 position-relative lines pb-3 ">Contact Us</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="item-contact container">
-            <div class="content d-flex">
-              <div class="div-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div>
-                <h4>Our Office Addres</h4>
-                <p>Malad West, Mumbai, Maharashtra 400064</p>
-              </div>
-            </div>
-            <div class="content d-flex  ">
-              <div class="div-icon">
-                <i class="fas fa-envelope icon-font"></i>
-              </div>
-              <div>
-                <h4>General Enquiries</h4>
-                <p>contact@mysites.com</p>
-              </div>
-            </div>
-            <div class="content d-flex">
-            <div class="div-icon">
-                <i class="fas fa-phone-volume"></i>
-            </div>
-              <div>
-                <h4>Call Us</h4>
-                <p>+91-8888888888</p>
-              </div>
-            </div>
-            <div class="content d-flex">
-             <div class="div-icon">
-                <i class="fas fa-clock icon-font"></i>
-             </div>
-              <div>
-                <h4>Our Timing</h4>
-                <p>Mon - Sun : 09:00 AM - 09:00 PM</p>
-              </div>
-            </div>
-          </div>
+    </div>
+
+  <!--  
+    End Testimonial
+  -->
+
+  <!--  
+    Start Contact
+  -->
+
+    <div id="contact" class="py-5">
+      <div class="container">
+        <div class="col-md-12 text-center achievment_title">
+          <h2 class="text-uppercase">contact us</h2>
+          <div id="lines"></div>
         </div>
-        <div class="col-md-6">
-          <div class="item-content text-center">
+
+        <div class="row col-12">
+          <div class="col-lg-6">
+            <ul class="list-unstyled">
+              <li class="list d-flex">
+                <div class="list_icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="list_desc">
+                  <h3 class="text-capitalize">
+                    our office address
+                  </h3>
+                  <h4 class="text-muted">
+                    Malad West, Mumbai, Maharashtra 400064
+                  </h4>
+                </div>
+              </li>
+              <li class="list d-flex">
+                <div class="list_icon">
+                  <i class="fas fa-envelope icon-font"></i>
+                </div>
+                <div class="list_desc">
+                  <h3 class="text-capitalize">
+                    General Enquiries
+                  </h3>
+                  <h4 class="text-muted">
+                    contact@mysites.com
+                  </h4>
+                </div>
+              </li>
+              <li class="list d-flex">
+                <div class="list_icon">
+                  <i class="fas fa-phone-volume"></i>
+                </div>
+                <div class="list_desc">
+                  <h3 class="text-capitalize">
+                    Call Us
+                  </h3>
+                  <h4 class="text-muted">
+                    +91-8888888888
+                  </h4>
+                </div>
+              </li>
+              <li class="list d-flex">
+                <div class="list_icon">
+                  <i class="fas fa-clock icon-font"></i>
+                </div>
+                <div class="list_desc">
+                  <h3 class="text-capitalize">
+                    Our Timing
+                  </h3>
+                  <h4 class="text-muted">
+                    Mon - Sun : 09:00 AM - 09:00 PM
+                  </h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
             <form>
-              <input type="text" placeholder="Your Name" />
-              <input type="email" placeholder="Your Email" />
-              <input type="text" placeholder="Subject" />
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                placeholder="Message"
-                rows="3"
-              ></textarea>
-              <button class="btn btn-danger btn-lg my-2 px-4 rounded-pill">
-                Submit
-              </button>
+              <div>
+                <div class="mb-4">
+                  <input type="text" class="form-control py-4" placeholder="Name">
+                </div>
+                <div class="mb-4">
+                  <input type="email" class="form-control py-4" placeholder="E-mail" required>
+                </div>
+                <div class="mb-4">
+                  <input type="number" class="form-control py-4" placeholder="Number">
+                </div>
+                <div class="mb-4">
+                  <textarea rows="3" class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+                  <div class="invalid-feedback">
+                    Please enter a message in the textarea.
+                  </div>
+                </div>
+  
+                <button class="btn btn-outline-danger py-3 px-4">
+                  <i class="color far fa-paper-plane"></i>
+                  Send Message
+                </button>
+              </div>
             </form>
           </div>
         </div>
       </div>
-    </section>
-  </div>
-    <div class="container-fluid bg-contact text-center text-white p-2">
-      <p>© Copyrights 2021 - 2022.BLOOD BANK.All Rights Reserved.</p>
     </div>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/jquery.skitter.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/home.js"></script>
-    <script src="js/search.js"></script>
-  </body>
+
+  <!--  
+    End Contact
+  -->
+
+  <!--  
+    Start Footer
+  -->
+
+    <div id="footer" class="py-1 bg-danger">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <div class="our_name">
+          <h4 class="text-white mb-0"><i class="fas fa-crown"></i> <span style="border-right: 2px solid rgb(253, 126, 20);padding-right: 5px;" class="wep text-uppercase">wep</span> <span class="kings text-uppercase">kings</span> <i class="fas fa-crown"></i></h4>
+        </div>
+        <div class="copyright text-white-50">
+          CopyRight &copy; By KingsWep 2020-2021 
+        </div>
+      </div>
+    </div>
+
+  <!--  
+    End Footer
+  -->
+
+
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+</body>
 </html>
