@@ -867,13 +867,14 @@
 }
 
 
-/* #signForm{
+ /* #signForm{
     display: none;
 }
 
-#log{
+#logForm{
     display: flex;
 } */
+
 #btnSign{
     cursor: pointer;
 }

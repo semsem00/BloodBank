@@ -1,34 +1,6 @@
-// for skitter 
 
-$(window).on('load', function() {
-    $(".skitter-large").skitter({
-       
-        fullscreen:true,
-        theme:"clean",
-    
-        animation: 'random',
-        // responsive: {
-        //   small: {
-        //     animation: 'fade',
-        //     max_width: 768,
-        //     suffix: '-small'
-        //   },
-        //   medium: {
-        //     animation: 'directionRight',
-        //     max_width: 1024,
-        //     suffix: '-medium'
-        //   }
-        // }
-    });
-  });
 
-//scroll to section
- $(".nav-link").click(function(){
-   let targetHref = $(this).atrr("href");
-   $('html','body').animate({
-     scrollTop: $(targetHref).offset().top
-   },1000);
- })
+
 // globale variable
 
 let logEmail= document.getElementById("logEmail");
@@ -40,6 +12,25 @@ let btnLogin=document.getElementById("btnLogin");
 let btnSignup=document.getElementById("btnSignup");
 let confirmFailed = document.getElementById("confirmFailed");
 let confirmSuccess = document.getElementById("confirmSuccess");
+
+
+// let signForm = document.getElementById("signForm")
+// let btnSign= document.getElementById("btnSign")
+// let logForm = document.getElementById("logForm")
+
+
+// signForm.classList.add('d-none');
+
+// btnSign.click(function(){
+ 
+
+
+//   logForm.classList.remove("d-flex");
+//   logForm.classList.add("d-none");
+//   signForm.classList.remove("d-none");
+//   logForm.classList.add("d-flex");
+// });
+
 
 
 
