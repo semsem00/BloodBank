@@ -732,3 +732,72 @@
                           End Footer
 ================================================================================
 */
+
+/*
+================================================================================
+                          start login & sign up
+================================================================================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Dancing+Script&family=Great+Vibes&family=Open+Sans&display=swap');
+
+.loginPage, .signupPage{
+        background-image: url("../images/blood-donorship-after-giving-blood-gray-background_.jpg");
+        background-size: 100% 100%;
+        font-family: 'Titillium Web', sans-serif; 
+        overflow: hidden;
+}
+
+
+/* #signForm{
+    display: none;
+}
+
+#log{
+    display: flex;
+} */
+#btnSign{
+    cursor: pointer;
+}
+.login, .Signup{
+    position: absolute;
+    top: 15%;
+    left:60%;
+    background-color: rgba(44, 43, 49, 0.5);
+    color: #fff;
+    width: 400px;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.dx{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cap{
+   position: absolute;
+   top: 20%;
+   left: 20px;
+}
+
+.cap h3{
+    font-family: 'Dancing Script', cursive;
+}
+
+input{
+    margin:10px 0 ;
+    padding: 6px 12px;
+    border-radius: 5px;
+   
+}
+
+.login a ,.Signup a{
+    text-decoration: none;
+    color: #fff;
+}

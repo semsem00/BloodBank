@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="loginPage">
+     <div class="container dx position-relative">
+        <div class="cap ">
+            <h2>
+                EVERYONE <br>
+                COULD BE <br>
+                <strong>A HERO ..</strong>
+            </h2>
+            <h3>Be a Donar</h3>
+
+        </div>
+         <div class="item1  d-flex align-items-center justify-content-center vh-100 position-relative"id="log">
+             <div class="login d-flex flex-column  p-5 shadow-lg ">
+                 <h1>Login</h1>
+                 <input type="email" placeholder="Enter your email" id="logEmail">
+                 <input type="password" placeholder="Enter your password" id="logPass">
+
+                 <p class="d-none text-danger " id="fillInp">Please Fill the inputs</p>
+                 <p class="d-none text-danger" id="errorMsg">Your Email or Password is Incorrect</p>
+                 <a type="submit" class="btn btn-danger  my-2"  onclick="logIN();" id="btnLogin">Login</a>
+                 <p>Don’t have an account? <button id="btnSign">Sign Up</button></p>
+             </div>
+         </div>
+
+
+         <div class="item1 d-none align-items-center justify-content-center vh-100 position-relative" id="signForm">
+            <div class="Signup d-flex flex-column  p-5 shadow">
+                <h1>Sign Up</h1>
+               
+                    <input type="text" placeholder="Enter your name" id="signName">
+                    <input type="email" placeholder="Enter your email" id="signEmail">
+                    <input type="password" placeholder="Enter your password" id="signPass">
+               
+                <p class="d-none text-success text-center font-weight-bold" id="confirmSuccess">Success</p>
+                <p class="d-none text-danger font-weight-bold text-center" id="existAccount" >This Acount Is Already Exist </p>
+                <p class="d-none text-danger font-weight-bold text-center" id="confirmFailed">Sign up Failed ! please Try Again</p>
+                <p class="d-none text-danger font-weight-bold text-center" id="exist">All Input Filed is Required</p>
+                <a type="submit" class="btn btn-danger my-2" onclick="signUP()" id="btnSignup">Sign up</a>
+                <p>You have an account? <a href="login.html">Sign in</a></p>
+
+
+                <script src="js/jquery-3.6.0.min.js"></script>
+                <script src="js/popper.min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/home.js"></script>
+            </div>
+        </div>
+     </div>
+     </body>
+</html>
