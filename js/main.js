@@ -76,16 +76,17 @@ var donation        = document.querySelector(".donation"),
 
       clearInputs();
 
-
+      $("#donar_popup").fadeOut(1000);
 
     } else {
-      invalid_inputs.className = "d-block"
+      $("#invalid-inputs").fadeIn(500);
     }
   };
 };
 
 skip_error.onclick = function(){
-  invalid_inputs.classList.add("d-none")
+  invalid_inputs.classList.remove("d-block");
+  invalid_inputs.classList.add("d-none");
 }
 
 function clearInputs() {
