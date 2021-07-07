@@ -1,6 +1,3 @@
-
-
-
 // globale variable
 
 let logEmail= document.getElementById("logEmail");
@@ -14,22 +11,16 @@ let confirmFailed = document.getElementById("confirmFailed");
 let confirmSuccess = document.getElementById("confirmSuccess");
 
 
-// let signForm = document.getElementById("signForm")
-// let btnSign= document.getElementById("btnSign")
-// let logForm = document.getElementById("logForm")
 
+$("#sign_Up").click(function(){
+  $("#signForm").fadeIn(1000);
+  $("#logForm").fadeOut(1000);
+});
 
-// signForm.classList.add('d-none');
-
-// btnSign.click(function(){
- 
-
-
-//   logForm.classList.remove("d-flex");
-//   logForm.classList.add("d-none");
-//   signForm.classList.remove("d-none");
-//   logForm.classList.add("d-flex");
-// });
+$("#sign_In").click(function(){
+  $("#signForm").fadeOut(1000);
+  $("#logForm").fadeIn(1000);
+})
 
 
 
@@ -179,8 +170,9 @@ function logIN(){
       if(userList[i].userEmail == logEmail.value &&
        userList[i].userpass == logPass.value){
           
-            btnLogin.setAttribute("href", "index.html")
+            // btnLogin.setAttribute("href", "index.html")
             errorMsg.classList.add("d-none");
+            location.replace("main.html")
           }else{
          
             errorMsg.classList.replace("d-none", "d-block");

@@ -867,13 +867,13 @@
 }
 
 
- /* #signForm{
+ #signForm{
     display: none;
 }
 
 #logForm{
     display: flex;
-} */
+}
 
 #btnSign{
     cursor: pointer;
@@ -919,4 +919,8 @@ input{
 .login a ,.Signup a{
     text-decoration: none;
     color: #fff;
+}
+
+.check{
+  background-color: transparent !important;
 }
