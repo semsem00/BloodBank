@@ -568,104 +568,101 @@
     End Footer
   -->
 
-  <!-- -----------------------Search-------------------------------------------- -->
+  <!--
+    ---------------------------------------Search--------------------------------------------
+  -->
 
-  <div class="container " id="SearchDiv">
-    <div  class="container  rounded  mx-auto  mt-3 mr-auto  SearchBlok  position-relative">
-      <i class='fas fa-window-close   position-absolute  'id='CloseIcon'></i>
-      <div class="w-100 d-flex justify-content-center  ">
-
-         
-    <div class="d-flex justify-content-between w-100  p-4">
-      <div class="w-50  mt-3 ">
-        <select class="form-control " id="SearchBloodType">
-          <option selected hidden disabled>Blood Type</option>
-          <option>A+</option>
-          <option>A-</option>
-          <option>B+</option>
-          <option>B-</option>
-          <option>O+</option>
-          <option>O-</option>
-          <option>AB+</option>
-          <option>AB-</option>
-        </select>
-      </div>
-
-      <div class="w-50 mt-3 mr-2 d-flex">
-        <select class="form-control location" id='SearchCity'>
-          <option hidden selected disabled>Choose City</option>
-          <option value="51">أسـوان</option>
-          <option value="49">اسيوط</option>
-          <option value="50">الأقصر</option>
-          <option value="47">الإسكندرية</option>
-          <option value="41">الإسماعيلية</option>
-          <option value="38">البحيره</option>
-          <option value="39">الجيزه</option>
-          <option value="510">الحسنيه</option>
-          <option value="588">الخارجة</option>
-          <option value="589">الداخلة</option>
-          <option value="414">الدقهلية</option>
-          <option value="508">الزقازيق</option>
-          <option value="57">السلوم</option>
-          <option value="42">السويس</option>
-          <option value="37">الشرقية</option>
-          <option value="55">الطور</option>
-          <option value="54">العريش</option>
-          <option value="517">الغربية</option>
-          <option value="58">الغردقه</option>
-          <option value="590">الفرافرة</option>
-          <option value="52">الفيوم</option>
-          <option value="36">القاهره</option>
-          <option value="413">القليوبية</option>
-          <option value="467">المحلة الكبرى</option>
-          <option value="45">المنصورة</option>
-          <option value="410">المنوفية</option>
-          <option value="40">المنيا</option>
-          <option value="587">الوادي الجديد</option>
-          <option value="48">بنى سويف</option>
-          <option value="46">بورسعيد</option>
-          <option value="399">حلوان</option>
-          <option value="44">دمياط</option>
-          <option value="469">ديرب نجم</option>
-          <option value="56">رأس البر</option>
-          <option value="412">رفح</option>
-          <option value="402">سوهاج</option>
-          <option value="53">شرم الشيخ</option>
-          <option value="584">صان الحجر</option>
-          <option value="470">صفط زريق</option>
-          <option value="518">طنطا</option>
-          <option value="509">فاقوس</option>
-          <option value="398">قنا</option>
-          <option value="403">كفر الشيخ</option>
-          <option value="592">كفر صقر</option>
-          <option value="507">منيا القمح</option>
-        </select>
-        <button class='btn btn-info saerchButton h-75 pb-3'> <i class="fas fa-search "></i> </button>
-      </div>
-      
-
-       
-      </div>
-      </div>
-
-      <!-- ----------------Output Table--------------------------- -->
-      <h3 class='result text-warning mt-2 text-center pb-3'></h3>
-      <table class="table mt-3  text-white text-center d-none ">
+    <div class="container py-3" id="SearchDiv">
+      <div class="container rounded mx-auto mt-3 mr-auto SearchBlok position-relative">
+        <div class="w-100 d-flex justify-content-between">
+          <div id="CloseIcon">
+            <i class='fas fa-window-close'></i>
+          </div>
+          <div class="d-flex justify-content-between w-100 p-4">
+            <div class="w-50  mt-3 ">
+              <select class="form-control " id="SearchBloodType">
+                <option selected hidden disabled>Blood Type</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+              </select>
+            </div>
+  
+            <div class="w-50 mt-3 mr-2 d-flex">
+              <select class="form-control location" id='SearchCity'>
+                <option hidden selected disabled>Choose City</option>
+                <option value="51">أسـوان</option>
+                <option value="49">اسيوط</option>
+                <option value="50">الأقصر</option>
+                <option value="47">الإسكندرية</option>
+                <option value="41">الإسماعيلية</option>
+                <option value="38">البحيره</option>
+                <option value="39">الجيزه</option>
+                <option value="510">الحسنيه</option>
+                <option value="588">الخارجة</option>
+                <option value="589">الداخلة</option>
+                <option value="414">الدقهلية</option>
+                <option value="508">الزقازيق</option>
+                <option value="57">السلوم</option>
+                <option value="42">السويس</option>
+                <option value="37">الشرقية</option>
+                <option value="55">الطور</option>
+                <option value="54">العريش</option>
+                <option value="517">الغربية</option>
+                <option value="58">الغردقه</option>
+                <option value="590">الفرافرة</option>
+                <option value="52">الفيوم</option>
+                <option value="36">القاهره</option>
+                <option value="413">القليوبية</option>
+                <option value="467">المحلة الكبرى</option>
+                <option value="45">المنصورة</option>
+                <option value="410">المنوفية</option>
+                <option value="40">المنيا</option>
+                <option value="587">الوادي الجديد</option>
+                <option value="48">بنى سويف</option>
+                <option value="46">بورسعيد</option>
+                <option value="399">حلوان</option>
+                <option value="44">دمياط</option>
+                <option value="469">ديرب نجم</option>
+                <option value="56">رأس البر</option>
+                <option value="412">رفح</option>
+                <option value="402">سوهاج</option>
+                <option value="53">شرم الشيخ</option>
+                <option value="584">صان الحجر</option>
+                <option value="470">صفط زريق</option>
+                <option value="518">طنطا</option>
+                <option value="509">فاقوس</option>
+                <option value="398">قنا</option>
+                <option value="403">كفر الشيخ</option>
+                <option value="592">كفر صقر</option>
+                <option value="507">منيا القمح</option>
+              </select>
+              <button class='btn btn-info saerchButton h-75 pb-3'> <i class="fas fa-search "></i> </button>
+            </div>
+          </div>
+        </div>
+  
+        <!--
+          ---------------------------------------Output Table--------------------------------------------
+        -->
+        <h3 class='result text-warning mt-2 text-center pb-3'></h3>
+        <table class="table mt-3  text-white text-center d-none ">
           <thead>
               <th>Name</th>
               <th>E-Mail</th>
               <th>Phone</th>
-            
-              
           </thead>
           <tbody class='TableBody'>
-              
+  
           </tbody>
-
-      </table>
-
-</div>
-  </div>
+        </table>
+      </div>
+    </div>
 
 
 

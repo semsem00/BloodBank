@@ -31,8 +31,6 @@
       border: 1px solid #f25454;
     }
 
-
-
     .animation .drop{
       position: absolute;
       top: 0%;
@@ -160,7 +158,7 @@
       -moz-transition: color .5s;
       -ms-transition: color .5s;
       -o-transition: color .5s;
-}
+    }
 
     .fa-window-close:hover{
       color:rgba(4, 54, 121, .6);
@@ -237,7 +235,6 @@
     z-index: 222;
     width: 100%;
     background-color: transparent;
-    /* padding-bottom: 1%; */
     border-bottom: 1px solid #ccc;
   }
 
@@ -248,8 +245,8 @@
     top: 40%;
     left: 100%;
     height: 200px !important;
-    animation: textAnimate 2s 0.5s 1;
-    -webkit-animation: textAnimate .8s 0.5s 1 forwards;
+    animation: textAnimate 2s 0.5s 1 forwards;
+    -webkit-animation: textAnimate 2s 0.5s 1 forwards;
   }
 
   @keyframes textAnimate {
@@ -257,9 +254,6 @@
       left: 100%;
     }
     100%{
-      /* box-shadow: 0px 5px 15px #ccc,
-      0px -5px 15px #ccc; */
-      /* background-color: rgba(255, 255, 255, .3); */
       left: 10%;
     }
   }
@@ -269,11 +263,6 @@
     padding: 0px 5px 2px;
     margin: 0px;
     color: #fff;
-    /* border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px; */
   }
   
   #navigation .carousel-caption h5,
@@ -282,12 +271,6 @@
     font-size: 2rem;
     font-weight: bold;
   }
-
-  /* #slideToDonat{
-    position: absolute;
-    top: 40%;
-    right: 10%;
-  } */
 
   #navigation .carousel-control-prev,
   #navigation .carousel-control-next{
@@ -365,7 +348,7 @@
     -o-transform: scale(1.3);
   }
 
-  .animation{
+  #navigation .animation{
     position: absolute;
     bottom: 3%;
     left: 50%;
@@ -380,13 +363,13 @@
     -o-transform: translate(-50%,-50%);
   }
 
-  .animation:hover{
+  #navigation .animation:hover{
     cursor: pointer;
     border: 1px solid #f25454;
     /* z-index: 999999999999990; */
   }
 
-  .animation .drop{
+  #navigation .animation .drop{
     position: absolute;
     top: 0%;
     left: 38%;
@@ -446,7 +429,7 @@
       -moz-border-radius: 15px;
       -ms-border-radius: 15px;
       -o-border-radius: 15px;
-}
+    }
 
     #carousel-caption h5{
       font-size: 2rem !important;
@@ -474,8 +457,7 @@
       -moz-border-radius: 15px;
       -ms-border-radius: 15px;
       -o-border-radius: 15px;
-}
-
+    }
 
     #navigation .change span{
       font-size: 1.6rem;
@@ -493,7 +475,7 @@
       -moz-border-radius: 15px;
       -ms-border-radius: 15px;
       -o-border-radius: 15px;
-}
+    }
 
     #navigation .change span{
       font-size: 1.4rem;
@@ -510,7 +492,7 @@
       -moz-border-radius: 15px;
       -ms-border-radius: 15px;
       -o-border-radius: 15px;
-}
+    }
 
     #navigation .change span{
       font-size: 2rem;
@@ -640,7 +622,6 @@
 
   #achievment #achievment_title h2{
     font-size: 2.3rem;
-
   }
 
   #status{
@@ -750,7 +731,7 @@
 
 /*
 ================================================================================
-                                End Achievment
+                                  End Achievment
 ================================================================================
 */
 
@@ -791,7 +772,7 @@
 
 /*
 ================================================================================
-                            Start Contact
+                                  Start Contact
 ================================================================================
 */
 
@@ -823,13 +804,13 @@
 
 /*
 ================================================================================
-                          End Contact
+                                  End Contact
 ================================================================================
 */
 
 /*
 ================================================================================
-                          Start Footer
+                                  Start Footer
 ================================================================================
 */
 
@@ -841,13 +822,13 @@
     font-size: 1.3rem;
   }
 
-  .fa-crown{
+  #footer .fa-crown{
     color: rgb(253, 126, 20);
   }
 
 /*
 ================================================================================
-                          End Footer
+                                  End Footer
 ================================================================================
 */
 
@@ -857,28 +838,28 @@
 ================================================================================
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Dancing+Script&family=Great+Vibes&family=Open+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Dancing+Script&family=Great+Vibes&family=Open+Sans&display=swap');
 
-.loginPage, .signupPage{
-        background-image: url("../images/blood-donorship-after-giving-blood-gray-background_.jpg");
-        background-size: 100% 100%;
-        font-family: 'Titillium Web', sans-serif; 
-        overflow: hidden;
-}
+  .loginPage, .signupPage{
+    background-image: url("../images/RegisterCover/cover.jpg");
+    background-size: 100% 100%;
+    font-family: 'Titillium Web', sans-serif; 
+    overflow: hidden;
+  }
 
 
- #signForm{
+  #signForm{
     display: none;
-}
+  }
 
-#logForm{
+  #logForm{
     display: flex;
-}
+  }
 
-#btnSign{
+  #btnSign{
     cursor: pointer;
-}
-.login, .Signup{
+  }
+  .login, .Signup{
     position: absolute;
     top: 15%;
     left:60%;
@@ -889,58 +870,61 @@
     border-bottom-right-radius: 100%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-}
+  }
 
-.dx{
+  .dx{
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
-    
-}
+  }
 
-.cap{
-   position: absolute;
-   top: 20%;
-   left: 20px;
-}
+  .cap{
+    position: absolute;
+    top: 20%;
+    left: 20px;
+  }
 
-.cap h3{
+  .cap h3{
     font-family: 'Dancing Script', cursive;
-}
+  }
 
-input{
+  input{
     margin:10px 0 ;
     padding: 6px 12px;
     border-radius: 5px;
-   
-}
+  }
 
-.login a ,.Signup a{
+  .login a ,.Signup a{
     text-decoration: none;
     color: #fff;
-}
+  }
 
-.check{
-  background-color: transparent !important;
-}
+  .check{
+    background-color: transparent !important;
+  }
 
 /*------------------------ Search Section------------------------------------ */
-.SearchBlok{
-  background-Color:rgba(165, 42, 42 , 0.8);
-  width:70%;
-}
-.saerchButton:hover{
-  background-Color:rgba(165, 42, 42 , 0.8);
-  border:solid 1px rgba(165, 42, 42 , 0.8);
-}
-.saerchButton{
-  transition:all .7s;
-}
-#SearchDiv{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% , -50%);
-  z-index: 99;
-}
+  .SearchBlok{
+    background-Color:rgba(165, 42, 42 , 0.8);
+    width:70%;
+  }
+  .saerchButton:hover{
+    background-Color:rgba(165, 42, 42 , 0.8);
+    border:solid 1px rgba(255, 255, 255 , 1);
+  }
+  .saerchButton{
+    transition: all .7s;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -ms-transition: all .7s;
+    -o-transition: all .7s;
+  }
+  #SearchDiv{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transform: translate(-50% , -50%);
+    z-index: 99;
+  }

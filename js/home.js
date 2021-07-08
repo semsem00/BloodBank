@@ -13,13 +13,15 @@ let confirmSuccess = document.getElementById("confirmSuccess");
 
 
 $("#sign_Up").click(function(){
-  $("#signForm").fadeIn(1000);
-  $("#logForm").fadeOut(1000);
+  $("#logForm").fadeOut(1000 , function(){
+    $("#signForm").fadeIn(1000);
+  });
 });
 
 $("#sign_In").click(function(){
-  $("#signForm").fadeOut(1000);
-  $("#logForm").fadeIn(1000);
+  $("#signForm").fadeOut(1000 , function(){
+    $("#logForm").fadeIn();
+  });
 })
 
 

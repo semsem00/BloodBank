@@ -1,5 +1,5 @@
 // Navigation Variabls
-var aboutOffset       = $("#about").offset().top,
+let aboutOffset       = $("#about").offset().top,
     statusOffset      = $("#status").offset().top,
     achievmentOffset  = $("#achievment").offset().top,
     testimonialOffset = $("#testimonial").offset().top,
@@ -7,7 +7,7 @@ var aboutOffset       = $("#about").offset().top,
     navHeight         = $("nav").outerHeight();
 
 // Popup Variabls
-var fnInput    = document.getElementById("FnInput"),
+let fnInput    = document.getElementById("FnInput"),
     lnInput    = document.getElementById("LnInput"),
     emailInput = document.getElementById("EmailInput"),
     mobInput   = document.getElementById("MobInput"),
@@ -16,15 +16,24 @@ var fnInput    = document.getElementById("FnInput"),
     subBtn     = document.getElementById("SubBtn");
 
 // Status Variabls
-var donation        = document.querySelector(".donation"),
+let donation        = document.querySelector(".donation"),
     donar_popup     = document.querySelector("#donar_popup"),
     invalid_inputs  = document.querySelector("#invalid-inputs"),
     skip_error      = document.querySelector(".skip-error");
 
+// Search Variabls
+let BloodType     = document.getElementById('SearchBloodType'),
+    City          = document.getElementById('SearchCity'),
+    BtnSearch     = document.querySelector('.saerchButton'),
+    TableBody     = document.querySelector('.TableBody'),
+    result        = document.querySelector('.result'),
+    table         = document.querySelector('.table'),
+    SearchSection = document.getElementById('SearchDiv');
+
 /*
 =========================================================================================================================================
 =========================================================================================================================================
-                                                       Start Popup
+                                                            Start Popup
 ==========================================================================================================================================
 ==========================================================================================================================================
 */
@@ -45,58 +54,58 @@ var donation        = document.querySelector(".donation"),
       donationProcess = JSON.parse(localStorage.getItem("getBlood"));
     }
 
-  subBtn.onclick = () => {
-    if (
-      fnInput.value != "" &&
-      loca.value != "" &&
-      bloodType.value != "" &&
-      lnInput.value != "" &&
-      emailInput.value != "" &&
-      mobInput.value != ""
-    ) {
-      fnInput = document.getElementById("FnInput").value;
-      lnInput = document.getElementById("LnInput").value;
-      emailInput = document.getElementById("EmailInput").value;
-      mobInput = document.getElementById("MobInput").value;
-      bloodType = document.querySelector(".bloodType").value;
-      loca = document.querySelector(".location").value;
+    subBtn.onclick = () => {
+      if (
+        fnInput.value    != "" &&
+        loca.value       != "" &&
+        bloodType.value  != "" &&
+        lnInput.value    != "" &&
+        emailInput.value != "" &&
+        mobInput.value   != ""
+      ) {
+        fnInput    = document.getElementById("FnInput").value;
+        lnInput    = document.getElementById("LnInput").value;
+        emailInput = document.getElementById("EmailInput").value;
+        mobInput   = document.getElementById("MobInput").value;
+        bloodType  = document.querySelector(".bloodType").value;
+        loca       = document.querySelector(".location").value;
 
-      donation = {
-        firstName: fnInput,
-        lastName: lnInput,
-        loca: loca,
-        getBlood: bloodType,
-        email: emailInput,
-        mobile: mobInput,
-      };
+        donation = {
+          firstName: fnInput,
+          lastName:  lnInput,
+          loca:      loca,
+          getBlood:  bloodType,
+          email:     emailInput,
+          mobile:    mobInput,
+        };
 
-      donationProcess.push(donation);
+        donationProcess.push(donation);
 
-      localStorage.setItem("getBlood", JSON.stringify(donationProcess));
+        localStorage.setItem("getBlood", JSON.stringify(donationProcess));
 
-      clearInputs();
+        clearInputs();
 
-      $("#donar_popup").fadeOut(1000);
-
-    } else {
-      $("#invalid-inputs").fadeIn(500);
-    }
+        $("#donar_popup").fadeOut(1000);
+      } 
+      else {
+        $("#invalid-inputs").fadeIn(500);
+      }
+    };
   };
-};
 
-skip_error.onclick = function(){
-  invalid_inputs.classList.remove("d-block");
-  invalid_inputs.classList.add("d-none");
-}
+  skip_error.onclick = function(){
+    invalid_inputs.classList.remove("d-block");
+    invalid_inputs.classList.add("d-none");
+  }
 
-function clearInputs() {
-  document.getElementById("FnInput").value    = "";
-  document.getElementById("LnInput").value    = "";
-  document.getElementById("EmailInput").value = "";
-  document.getElementById("MobInput").value   = "";
-  document.querySelector(".bloodType").value  = "";
-  document.querySelector(".location").value   = "";
-}
+  function clearInputs() {
+    document.getElementById("FnInput").value    = "";
+    document.getElementById("LnInput").value    = "";
+    document.getElementById("EmailInput").value = "";
+    document.getElementById("MobInput").value   = "";
+    document.querySelector(".bloodType").value  = "";
+    document.querySelector(".location").value   = "";
+  }
 
 /*
 =========================================================================================================================================
@@ -114,66 +123,66 @@ function clearInputs() {
 ==========================================================================================================================================
 */
 
-$(window).scroll(function () {
-  let wScroll = $(window).scrollTop();
+  $(window).scroll(function () {
+    let wScroll = $(window).scrollTop();
 
-  if (wScroll >= 100) {
-    $("#mainNav").fadeOut();
-    $("#secNav").slideDown();
-  } else {
-    $("#mainNav").fadeIn();
-    $("#secNav").slideUp();
-  }
-});
+    if (wScroll >= 100) {
+      $("#mainNav").fadeOut();
+      $("#secNav").slideDown();
+    } else {
+      $("#mainNav").fadeIn();
+      $("#secNav").slideUp();
+    }
+  });
 
-$(".home, .about, .status, .achievment, .testimonial, .contact").click(
-  function () {
-    $(".home").attr("href", "#navigation");
-    $(".about").attr("href", "#about");
-    $(".status").attr("href", "#status");
-    $(".achievment").attr("href", "#achievment");
-    $(".testimonial").attr("href", "#testimonial");
-    $(".contact").attr("href", "#contact");
-  }
-);
+  $(".home, .about, .status, .achievment, .testimonial, .contact").click(
+    function () {
+      $(".home").attr("href", "#navigation");
+      $(".about").attr("href", "#about");
+      $(".status").attr("href", "#status");
+      $(".achievment").attr("href", "#achievment");
+      $(".testimonial").attr("href", "#testimonial");
+      $(".contact").attr("href", "#contact");
+    }
+  );
 
-$(".home").click(function () {
-  $("html,body").animate({ scrollTop: 0 }, 1000);
-});
+  $(".home").click(function () {
+    $("html,body").animate({ scrollTop: 0 }, 1000);
+  });
 
-$(".about").click(function () {
-  $("html,body").animate({ scrollTop: aboutOffset - navHeight }, 1000);
-});
+  $(".about").click(function () {
+    $("html,body").animate({ scrollTop: aboutOffset - navHeight }, 1000);
+  });
 
-$(".status").click(function () {
-  $("html,body").animate({ scrollTop: statusOffset - navHeight }, 1000);
-});
+  $(".status").click(function () {
+    $("html,body").animate({ scrollTop: statusOffset - navHeight }, 1000);
+  });
 
-$(".achievment").click(function () {
-  $("html,body").animate({ scrollTop: achievmentOffset - navHeight }, 1000);
-});
+  $(".achievment").click(function () {
+    $("html,body").animate({ scrollTop: achievmentOffset - navHeight }, 1000);
+  });
 
-$(".testimonial").click(function () {
-  $("html,body").animate({ scrollTop: testimonialOffset - navHeight }, 1000);
-});
+  $(".testimonial").click(function () {
+    $("html,body").animate({ scrollTop: testimonialOffset - navHeight }, 1000);
+  });
 
-$(".contact").click(function () {
-  $("html,body").animate({ scrollTop: contactOffset - navHeight }, 1000);
-});
+  $(".contact").click(function () {
+    $("html,body").animate({ scrollTop: contactOffset - navHeight }, 1000);
+  });
 
-// Click On Animation And Go To About Section
+  // Click On Animation And Go To About Section
 
-$(".animation").click(function () {
-  $("html,body").animate({ scrollTop: aboutOffset - 200 }, 1000);
-});
+  $(".animation").click(function () {
+    $("html,body").animate({ scrollTop: aboutOffset - 200 }, 1000);
+  });
 
-$(window).scroll(function () {
-  if ($(window).scrollTop() >= aboutOffset - 400) {
-    $(".animation").fadeOut();
-  } else {
-    $(".animation").fadeIn();
-  }
-});
+  $(window).scroll(function () {
+    if ($(window).scrollTop() >= aboutOffset - 400) {
+      $(".animation").fadeOut();
+    } else {
+      $(".animation").fadeIn();
+    }
+  });
 
 /* 
 =========================================================================================================================================
@@ -191,15 +200,15 @@ $(window).scroll(function () {
 ==========================================================================================================================================
 */
 
-$(function () {
-  $(".test").owlCarousel({
-    items: 1,
-    autoPlay: true,
-    smartSpeed: 700,
-    look: true,
-    autoPlayHoverPause: true,
+  $(function () {
+    $(".test").owlCarousel({
+      items: 1,
+      autoPlay: true,
+      smartSpeed: 700,
+      look: true,
+      autoPlayHoverPause: true,
+    });
   });
-});
 
 /* 
 =========================================================================================================================================
@@ -211,31 +220,23 @@ $(function () {
 
 // -----------------search Section------------------------------------//
 
-$("#SearchDiv #CloseIcon").click(function () {
-  $("#SearchDiv").fadeOut(1000);
+$("#CloseIcon").click(function () {
+  console.log("7ambozo")
+  $("#SearchDiv").fadeOut(1000)
 });
 
 $(".get_blood").click(function () {
   $("#SearchDiv").fadeIn(1000);
 });
 
-let BloodType=document.getElementById('SearchBloodType'),
- City=document.getElementById('SearchCity'),
- BtnSearch=document.querySelector('.saerchButton'),
- TableBody=document.querySelector('.TableBody'),
- result=document.querySelector('.result'),
- table=document.querySelector('.table'),
- SearchSection=document.getElementById('SearchDiv');
-
-
-
  let SearchArray = [];
- if ( localStorage.getItem("getBlood") == null){
+  if( localStorage.getItem("getBlood") == null)
+  {
     SearchArray  = [];
-   }
-   else{
+  }
+  else{
     SearchArray  = JSON.parse(localStorage.getItem("getBlood"));
-   }
+  }
 
 
 
